@@ -55,7 +55,6 @@ cd projeto-qualityMap-nopcommerce
 
     cypress/
      fixtures/
-        example.json
      integration/
        registro-usuario.cy.js.
      plugins/
@@ -71,7 +70,7 @@ cd projeto-qualityMap-nopcommerce
     
 - **cypress.config.js:** Arquivo de configuração do Cypress. Aqui você pode configurar opções como URL base, viewport, tempo de espera padrão, entre outros.
 
-- **fixtures/**: Pasta onde você pode colocar arquivos com dados de teste que serão usados em seus testes.
+- **fixtures/**: Pasta onde você pode colocar arquivos com dados de teste que serão usados em seus testes. Nesse caso, utilizei a biblioteca faker para gerar uma massa de testes mockada.
 
 - **integration/:** Pasta onde você escreverá seus testes. Neste exemplo, há dois arquivos de teste de exemplo: registro-usuario.cy.js.
 
@@ -92,4 +91,5 @@ import RegistroUsuario from '../support/page-objects/registro-page-objects'
 })
 
 Neste exemplo, importamos a classe registroUsuario do arquivo registro-page-objects.js em ../support/page-objects/registro-page-objects,js. Em seguida, criamos uma nova instância da classe registroUsuario e usamos seus métodos para visitar a página de registro.
+Como utilizei a biblioteca faker, recomendo a leitura da documentação em [Faker.js](https://fakerjs.dev/guide/).
 
