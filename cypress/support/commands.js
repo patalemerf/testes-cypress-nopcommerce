@@ -1,8 +1,8 @@
 import { faker } from '@faker-js/faker'
 
-Cypress.Commands.add('gerarFixtureDadosRegistro', () => {
+Cypress.Commands.add('gerarDadosUsuario', () => {
 
-    cy.writeFile('cypress/fixtures/gera-dados-registro.json', {
+    cy.writeFile('cypress/fixtures/gera-dados-usuario.json', {
 
         'hits':Cypress._.times(1, () => {
             return {
@@ -15,12 +15,13 @@ Cypress.Commands.add('gerarFixtureDadosRegistro', () => {
               'mes_aniversario':`${faker.number.bigInt({min: 1, max: 12})}`,
               'ano_aniversario':`${faker.number.bigInt({min: 1990, max: 2023})}`,
               'cidade':`${faker.location.city()}`,
-              'endereco_1': `${faker.location.streetAddress()}`,
-              'endereco_2': `${faker.location.streetAddress()}`,
+              'endereco': `${faker.location.streetAddress()}`,
               'codigo_postal': `${faker.location.zipCode()}`,
               'numero_telefone': `${faker.phone.number()}`,
-              'numero_fax': `${faker.phone.imei()}`,
+              'nome_recebedor': `${faker.person.fullName()}`,
+              'email_recebedor': `${faker.internet.email()}`,
+              'mensagem_recebedor': `${faker.lorem.sentence()}`,
             }
-        })
+        })[0]
     })
 })

@@ -1,22 +1,26 @@
 exports.el = {
     iconeRegistro:'.ico-register',
     selecioneGenero:'#gender-female',
-    escrevaPrimeiraNome:'#FirstName',
+    escrevaPrimeioNome:'#FirstName',
     escrevaUltimoNome:'#LastName',
     selecioneDiaAniversario:'[name="DateOfBirthDay"]',
     selecioneMesAniversario:'[name="DateOfBirthMonth"]',
     selecioneAnoAniversario:'[name="DateOfBirthYear"]',
     escrevaEmail:'#Email',
-    escrevaCompany:'#Company',
+    escrevaEmpresa:'#Company',
     escrevaSenha:'#Password',
     confirmaSenha:'#ConfirmPassword',
     botaoRegistro:'#register-button',
-    erroSenha:{
-        primeiroElemento:'p',
-        mensagem:'Password must meet the following rules:',
+    confirmacaoRegistro:'.result',
+    ErroCamposObrigatorios: {
+        primeiroNome: '#FirstName-error',
+        ultimoNome: '#LastName-error',
+        email: '#Email-error',
+        senha: '#Password-error',
+        confirmaSenha: '#ConfirmPassword-error'
     },
-    sucessoSenha:{
-        
-        mensagemSucesso:'Your registration completed'
+    mensagemSucesso:'Your registration completed',
+    mensagemErro:{
+
     }
 }

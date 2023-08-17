@@ -83,13 +83,13 @@ cd projeto-qualityMap-nopcommerce
 
 ## Exemplo de teste
 
-`import RegistroUsuario from '../support/page-objects/registro-page-objects'
-describe('Registro de usuario ', () => {
- it('Registro com senha válida', () => {
+import RegistroUsuario from '../support/page-objects/registro-page-objects'
+  describe('Registro de usuario ', () => {
+    it('Registro com senha válida', () => {
       RegistroUsuario.registro();
       RegistroUsuario.validaMensagemSucesso();
 })
-})`
+})
 
 Neste exemplo, importamos a classe registroUsuario do arquivo registro-page-objects.js em ../support/page-objects/registro-page-objects,js. Em seguida, criamos uma nova instância da classe registroUsuario e usamos seus métodos para visitar a página de registro.
 
