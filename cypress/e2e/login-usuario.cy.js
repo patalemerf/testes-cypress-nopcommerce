@@ -1,5 +1,4 @@
 import LoginUsuario from '../support/page-objects/login-page-objects'
-import RegistroUsuario from '../support/page-objects/registro-page-objects'
 
 describe('Login do usuário', () => {
   beforeEach(() => {
